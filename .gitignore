@@ -1,0 +1,38 @@
+# Four folder levels are supported for
+# the current DataDummy repository.
+# Because recursive globbing (that is, /**/)
+# is only supported on some platforms, there
+# is an ignore rule block for every level.
+# The structure is explained in the third level.
+
+
+/*
+!/index.html
+!/README.md
+!/.gitignore
+!/*/
+
+
+
+/*/*
+!/*/index.html
+!/*/*/
+
+
+
+# First, ignore all files on this level
+/*/*/*
+
+# Then whitelist all index.html files on this level
+!/*/*/index.html
+
+# Blacklisting of some unwanted folders on this level
+/*/sess*/index.html
+
+# Finally whitelist all folders of the next level
+!/*/*/*/
+
+
+
+/*/*/*/*
+!/*/*/*/index.html
